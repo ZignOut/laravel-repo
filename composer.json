@@ -7,13 +7,6 @@
             "Zignout\\LaravelRepo\\": "src"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "\\Zignout\\laravelRepo\\RepositoryProvider"
-            ]
-        }
-    },
     "license": "MIT",
     "authors": [
         {
