@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Repository;
+
+use App\Dummy;
+use Illuminate\Support\Collection;
+
+interface DummyRepositoryInterface
+{
+    public function all(): Collection;
+}

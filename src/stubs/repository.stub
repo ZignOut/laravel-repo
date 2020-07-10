@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Repository\Eloquent;
+
+use App\Repository\DummyRepositoryInterface;
+use App\Dummy;
+use Illuminate\Database\Eloquent\Collection;
+
+class DummyRepository extends BaseRepository implements DummyRepositoryInterface
+{
+    /**
+     * DummyRepository constructor
+     * 
+     * @param Dummy $model
+     */
+    public function __construct(Dummy $model)
+    {
+        parent::__construct($model);
+    }
+
+    /**
+     * get all Dummy from database.
+     *
+     * @return Collection
+     */
+    public function all(): Collection
+    {
+        return $this->model->all();
+    }
+}
