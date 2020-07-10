@@ -13,7 +13,12 @@ class RepositoryProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->publishes([
+            __DIR__.'/Console' => app_path('Console'),
+            __DIR__.'/Providers' => app_path('Providers'),
+            __DIR__.'/Repository' => app_path('Repository'),
+            __DIR__.'/stubs' => 'stubs'
+        ]);
     }
 
     /**
@@ -23,11 +28,6 @@ class RepositoryProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/Console' => app_path('Console'),
-            __DIR__.'/Providers' => app_path('Providers'),
-            __DIR__.'/Repository' => app_path('Repository'),
-            __DIR__.'/stubs' => 'stubs'
-        ]);
+        //
     }
 }
