@@ -13,6 +13,8 @@ class RepositoryProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__.'/config/app.php', 'app');
+
         $this->publishes([
             __DIR__.'/Console' => app_path('Console'),
             __DIR__.'/Providers' => app_path('Providers'),
