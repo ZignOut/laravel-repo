@@ -1,6 +1,6 @@
 <?php
 
-namespace Zignout\LaravelRepo\Providers;
+namespace Zignout\LaravelRepo;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,7 @@ class RepositoryProvider extends ServiceProvider
      */
     public function register()
     {
-        dd('Service Provider.');
+        //
     }
 
     /**
@@ -23,6 +23,11 @@ class RepositoryProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/Console' => app_path('Console'),
+            __DIR__.'/Providers' => app_path('Providers'),
+            __DIR__.'/Repository' => app_path('Repository'),
+            __DIR__.'/stubs' => 'stubs'
+        ]);
     }
 }
